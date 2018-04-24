@@ -1,0 +1,4 @@
+apiToken='******************************'
+chatId='******'
+[ $1 ] && curl https://api.telegram.org/bot$apiToken/getUpdates -d offset="$1" -d limit="$2" -d timeout=1 || echo 'empty num'
+

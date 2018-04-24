@@ -1,0 +1,9 @@
+apiToken='*****************************'
+text="$1"
+chatId="$2"
+if [ "$text" ]
+then
+ curl -s -X POST https://api.telegram.org/bot${apiToken}/sendMessage -d text="$text" -d chat_id="$chatId" -d parse_mode="Markdown"
+else
+ echo 'Err: empty message'
+fi
