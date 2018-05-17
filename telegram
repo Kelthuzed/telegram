@@ -1,6 +1,6 @@
-apiToken='*****************************'
+apiToken='581393220:AAFmUaWWo_DBUnz67lGdF_hPhHCT62kumDw'
 text="$1"
-chatId="$2"
+[ "$2" ] && chatId="$2" || chatId="483932348"
 if [ "$text" ]
 then
  curl -s -X POST https://api.telegram.org/bot${apiToken}/sendMessage -d text="$text" -d chat_id="$chatId" -d parse_mode="Markdown"
